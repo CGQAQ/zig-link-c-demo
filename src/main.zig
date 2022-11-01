@@ -8,4 +8,3 @@ const x = @cImport({
 pub fn main() !void {
     x.printout("hello world");
 }
-

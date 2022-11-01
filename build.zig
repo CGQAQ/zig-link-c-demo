@@ -15,9 +15,9 @@ pub fn build(b: *std.build.Builder) void {
     const exe = b.addExecutable("zig-1", "src/main.zig");
     exe.linkLibC();
     exe.addIncludePath(".\\src");
-    exe.addCSourceFiles(&[_][]const u8{
+    exe.addCSourceFiles(&.{
         "src/printout.c",
-    }, &[_][]u8{});
+    }, &.{});
     exe.setTarget(target);
     exe.setBuildMode(mode);
     exe.install();
